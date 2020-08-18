@@ -1,0 +1,5 @@
+<?php
+
+$htmlRules = '';
+
+return $htmlRules;
