@@ -51,6 +51,9 @@ class Shipping_Servientrega_Rules_WC extends WC_Shipping_Method_Shipping_Servien
         if ($instance->servientrega_product_type === '2' && $data['weight'] < 3)
             $data['weight'] = 3;*/
 
+        if($data['weight'] == 0)
+            $data['weight'] = 1;
+
         $data['total_valorization'] = $data['total_valorization'] < $total_min_shipping ? $total_min_shipping : $data['total_valorization'];
 
         return $data;
